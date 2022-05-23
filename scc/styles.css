@@ -70,6 +70,7 @@ h3,
 ul,
 p {
   margin: 0;
+  padding: 0;
 }
 
 img {
@@ -109,10 +110,14 @@ img {
   color: var(--accent-cl);
   text-decoration: none;
   display: inline-block;
+  
+}
+.logo-header {
   margin-top: 24px;
   margin-bottom: 25px;
   margin-right: 93px;
 }
+
 .logo-black {
   color: #212121;
 }
@@ -608,11 +613,12 @@ clients
   justify-content: center;
   align-items: center;
   /* list-style: none; */
-  margin: 0px;
-  gap: 15px;
+  
+  /* gap: 15px; */
 }
 
-/* .clients-list.list:last-child {margin-right: 0px;} */
+.client-item:last-child {margin-right: 0px;}
+.client-item {margin-right: 30px;}
 
 .client-link.link {
   background-color: var(--white);
@@ -824,18 +830,23 @@ portfolio
   margin-bottom: 0;
 }
 
-.projects.item:hover,
-.projects.item:focus {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
+.project.link:hover,
+.project.link:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 
+  0px 4px 4px rgba(0, 0, 0, 0.06),
+  1px 4px 6px rgba(0, 0, 0, 0.16);
 
 }
 
-.projects.item:hover .project-text {
+.project.link:hover .project-text {
   opacity: 1;
   transform: translateY(0);
 }
 
+.project.link:focus .project-text {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 .card-description {
   border-left: 1px solid #eeeeee;
