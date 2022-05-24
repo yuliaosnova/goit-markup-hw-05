@@ -68,6 +68,18 @@
         <button type="button" class="main-btn" data-modal-open>Заказать услугу</button>
         <div class="backdrop is-hidden" data-modal>
           <div class="modal-wrapper">
+            <form>
+              <h3 class="modal-title">Оставьте свои данные, мы вам перезвоним</h3>
+              <label for="user name">Имя</label>
+              <input type="text" name="name" id="user name" />
+              <label for="tel">Телефон</label>
+              <input type="tel" name="tel" id="tel" />
+              <label for="mail">Почта</label>
+              <input type="email" name="email" id="email" />
+              <!-- <label for="comment">Комментарий</label>
+              <textarea placeholder="Введите текст" /> -->
+
+            </form>
             <button type="button" class="modal-btn" data-modal-close>
               <svg class="close-icon" width="11" height="11">
                 <use href="./images/sprite.svg#icon-x-close"></use>
@@ -591,6 +603,20 @@
             </li>
           </ul>
         </div>
+        <form class="sign-up form">
+          <div class="sign-up group">
+              <label class="join-title" for="mail">Подпишитесь на рассылку</label>
+              <input type="email" name="mail" id="mail"
+              placeholder="E-mail" />
+          </div>
+          <button type="submit" class="sign-up button">
+            Подписаться
+            <svg class="icon-send" width="24px" height="24px">
+              <use href="./images/sprite.svg#icon-send"></use>
+            </svg>
+          </button>
+        </form>
+        
       </div>
     </footer>
 
