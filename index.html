@@ -65,26 +65,50 @@
     <main>
       <section class="hero">
         <h1 class="hero-title">ЭФФЕКТИВНЫЕ РЕШЕНИЯ <br />ДЛЯ ВАШЕГО БИЗНЕСА</h1>
-        <button type="button" class="main-btn" data-modal-open>Заказать услугу</button>
+        <button type="button" class="main-btn order" data-modal-open>Заказать услугу</button>
         <div class="backdrop is-hidden" data-modal>
           <div class="modal-wrapper">
-            <form>
-              <h3 class="modal-title">Оставьте свои данные, мы вам перезвоним</h3>
-              <label for="user name">Имя</label>
-              <input type="text" name="name" id="user name" />
-              <label for="tel">Телефон</label>
-              <input type="tel" name="tel" id="tel" />
-              <label for="mail">Почта</label>
-              <input type="email" name="email" id="email" />
-              <!-- <label for="comment">Комментарий</label>
-              <textarea placeholder="Введите текст" /> -->
-
-            </form>
             <button type="button" class="modal-btn" data-modal-close>
               <svg class="close-icon" width="11" height="11">
                 <use href="./images/sprite.svg#icon-x-close"></use>
               </svg>
             </button>
+            <b class="modal-title">Оставьте свои данные, мы вам перезвоним</b>
+            <form class="modal-form">
+              <label class="form-group">
+                <span class="form-label">Имя</span>
+                <input class="form-field" type="text" name="name" />
+                <svg class="modal-icon" width="18" height="18">
+                  <use href="./images/sprite.svg#icon-man"></use>
+                </svg>
+              </label>
+              <label class="form-group">
+                <span class="form-label">Телефон</span>
+                <input class="form-field" type="tel" name="tel" />
+                <svg class="modal-icon" width="18" height="18">
+                  <use href="./images/sprite.svg#icon-handset"></use>
+                </svg>
+              </label>
+              <label class="form-group">
+                <span class="form-label">Почта</span>
+                <input class="form-field" type="email" name="email" />
+                <svg class="modal-icon" width="18" height="18">
+                  <use href="./images/sprite.svg#icon-envelope-2"></use>
+                </svg>
+              </label>
+              <label class="form-group">
+                <span class="form-label">Комментарий</span>
+                <textarea class="form-message" name="user-message" placeholder="Введите текст"></textarea>
+              </label>
+              <label class="checkbox-form">
+                <input class="consent-checkbox" type="checkbox" name="consent" />
+                <p class="consent">Соглашаюсь с рассылкой и принимаю
+                  <a class="consent-link" href="">Условия договора</a>
+                </p>
+              </label>
+              <button type="submit" class="main-btn">Отправить</button>
+            </form>
+        
           </div>
         </div>
       </section>
@@ -609,7 +633,7 @@
               <input type="email" name="mail" id="mail"
               placeholder="E-mail" />
           </div>
-          <button type="submit" class="sign-up button">
+          <button type="submit" class="main-btn">
             Подписаться
             <svg class="icon-send" width="24px" height="24px">
               <use href="./images/sprite.svg#icon-send"></use>
