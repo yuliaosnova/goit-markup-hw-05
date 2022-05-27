@@ -384,6 +384,7 @@ modal
 }
 
 .modal-btn:hover .close-icon {fill: var(--accent-cl);}
+.modal-btn:focus .close-icon {fill: var(--accent-cl);}
 
 .close-icon {transition: var(--animation)}
 
@@ -415,10 +416,6 @@ modal
   align-items:flex-start;
   margin-bottom: 10px;
 
-  /* padding-bottom: 10px; */
-  /* padding-top: 4px; */
-  /* padding-left: 30px; */
-  
   position: relative;
 }
 
@@ -531,10 +528,11 @@ modal
   border-radius: 2px;
   background-size: contain;
   margin-right: 7px;
-
-
-  /* position: absolute; */
+  
 }
+.checkbox-icon:hover,
+.checkbox-icon:focus {border-color: #2196f3;}
+
 .consent-checkbox:checked + .checkbox-icon {
   background-image: url(../images/check-ico.svg);
   background-color: #2196f3;
