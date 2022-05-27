@@ -258,29 +258,6 @@ hero
   margin-bottom: 30px;
 }
 
-/* .main-btn {
-  font-family: inherit;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.88;
-  
-  text-align: center;
-  letter-spacing: 0.06em;
-  color: var(--white);
-  background-color: rgba(33, 150, 243, 1);
-  border-color: transparent;
-  cursor: pointer;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-
-  width: 200px;
-  height: 50px;
-
-  margin: 0 auto;
-  display: block;
-  border-radius: 4px;
-
-  animation: vibrate-1 2s linear infinite both;
-}  */
 
 .main-btn {
   font-family: inherit;
@@ -359,12 +336,11 @@ modal
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   width: 528px;
-  height: 581px;
+  /* height: 581px; */
   padding-top: 40px;
   padding-bottom: 40px;
   padding-left: 41px;
   padding-right: 39px;
-
 
   position: absolute;
   top: 50%;
@@ -437,18 +413,27 @@ modal
   flex-direction: column;
   justify-content: flex-start;
   align-items:flex-start;
+  margin-bottom: 10px;
 
-  padding-bottom: 10px;
-  padding-top: 4px;
+  /* padding-bottom: 10px; */
+  /* padding-top: 4px; */
+  /* padding-left: 30px; */
   
-  
+  position: relative;
 }
+
+.form-group.message {margin-bottom: 10px;}
+
 .form-label {
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
   color: #757575;
+
+  margin-bottom: 4px;
+
 }
+
 .form-field {
   width: 448px;
   height: 40px;
@@ -456,10 +441,21 @@ modal
   border-radius: 4px;
   padding-top: 12px;
   padding-bottom: 12px;
-  padding-left: 13px;
+  padding-left: 40px;
+  
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
 
-  position: relative;
+  outline: transparent;
+
+  transition: var(--animation)
 }
+
+.form-field:hover,
+.form-field:focus {
+ border-color: #2196f3;
+}
+
 .form-message {
   width: 448px;
   height: 120px;
@@ -470,10 +466,25 @@ modal
   padding-top: 12px;
   padding-bottom: 12px;
   margin-bottom: 20px;
+  
+  font-family: var(--main-font);
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  outline: transparent;
+
+  transition: var(--animation)
 }
+
+.form-message:hover,
+.form-message:focus {
+  border-color: #2196f3;
+}
+
 .checkbox-form {
   margin-bottom: 30px;
 }
@@ -492,9 +503,47 @@ modal
 }
 .modal-icon {
   position: absolute;
-  top: ;
+  top: 55%;
+  left: 14px;
+  transform: translate(-50% -50%);
+
+  transition: var(--animation)
 }
 
+.form-field:focus + .modal-icon {fill: #2196f3;}
+.form-field:hover + .modal-icon {fill: #2196f3;}
+
+.checkbox-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.consent-checkbox {
+  appearance: none;
+  position: absolute;
+}
+
+.checkbox-icon {
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  border: 2px solid rgba(33, 33, 33, 1);
+  border-radius: 2px;
+  background-size: contain;
+  margin-right: 7px;
+
+
+  /* position: absolute; */
+}
+.consent-checkbox:checked + .checkbox-icon {
+  background-image: url(../images/check-ico.svg);
+  background-color: #2196f3;
+  background-size: contain;
+
+  background-origin: border-box;
+  border-color: transparent;
+
+}
 /*===========================================
  benefits section 
  ============================================*/
@@ -882,12 +931,14 @@ clients
 .sign-up.form {
   display: flex;
   align-items: flex-end;
+  margin-left: auto;
 
 }
 .sign-up.group {
   display: flex;
   flex-direction: column;
   margin-right: 12px;
+ 
 }
 
 .sign-up.group input {
@@ -900,6 +951,8 @@ clients
   padding-top: 15px;
   padding-bottom: 15px;
   padding-left: 16px;
+
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .sign-up.group input::placeholder {
