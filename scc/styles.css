@@ -972,7 +972,7 @@ clients
 .sign-up.form {
   display: flex;
   align-items: flex-end;
-  margin-left: auto;
+  /* margin-left: auto; */
 
 }
 .sign-up.group {
