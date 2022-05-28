@@ -379,7 +379,8 @@ modal
   align-items: center;
   justify-content: center;
   padding: 0;
-
+  
+  outline: transparent;
   cursor: pointer;
 }
 
@@ -515,12 +516,12 @@ modal
   align-items: center;
   justify-content: center;
 }
-.consent-checkbox {
-  appearance: none;
-  position: absolute;
-}
+/* .consent-checkbox {
+   appearance: none;
+   position: absolute;
+} */
 
-.checkbox-icon {
+/* .checkbox-icon {
   display: inline-block;
   width: 16px;
   height: 15px;
@@ -529,11 +530,9 @@ modal
   background-size: contain;
   margin-right: 7px;
   
-}
-.checkbox-icon:hover,
-.checkbox-icon:focus {border-color: #2196f3;}
+} */
 
-.consent-checkbox:checked + .checkbox-icon {
+/* .consent-checkbox:checked + .checkbox-icon {
   background-image: url(../images/check-ico.svg);
   background-color: #2196f3;
   background-size: contain;
@@ -541,7 +540,51 @@ modal
   background-origin: border-box;
   border-color: transparent;
 
+} */
+
+.custom-checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 15px;
+  outline: 2px solid rgba(33, 33, 33, 1);
+  outline-offset: -2px;
+  border-radius: 2px;
+  margin-right: 7px;
+
+  transition: background-color 250ms ease;
 }
+
+.consent-checkbox:checked + .custom-checkbox {
+  background-color: #2196f3;
+  outline-color: transparent;
+}
+
+.custom-checkbox-icon {
+  opacity: 0;
+  transition: opasity 250ms ease;
+}
+
+.consent-checkbox:checked + .custom-checkbox .custom-checkbox-icon {
+  opacity: 1;
+  fill: #FFFFFF;
+}
+.consent-checkbox:hover + .custom-checkbox {
+  outline-color: #2196f3;
+}
+.custom-checkbox:focus {
+  outline-color: #2196f3;
+}
+
+/* button[type=submit] {
+  outline: transparent;
+}
+.consent-link {
+  outline: transparent;
+} */
+
+
 /*===========================================
  benefits section 
  ============================================*/
